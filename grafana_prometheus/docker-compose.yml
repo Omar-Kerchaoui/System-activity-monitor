@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - prometheus-data:/prometheus
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana.db:/etc/grafana/grafana.db
+      - ./grafana.ini:/etc/grafana/grafana.ini
+
+  node-exporter:
+    image: prom/node-exporter
+    ports:
+      - 9100:9100
+    volumes:
+      - /:/hostfs:ro
+    command:
+      - '--path.rootfs=/hostfs'
+
+  pushgateway:
+    image: prom/pushgateway
+    container_name: pushgateway
+    restart: unless-stopped
+    expose:
+      - 9091
+    ports:
+      - "9091:9091"
+    labels:
+      org.label-schema.group: "monitoring"
+
+
+volumes:
+  prometheus-data:
