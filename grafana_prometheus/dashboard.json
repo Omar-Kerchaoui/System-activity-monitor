@@ -38,7 +38,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -96,7 +96,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "topk(10, memory_usage)",
@@ -112,7 +112,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -190,11 +190,12 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "node_memory_MemTotal_bytes-node_memory_MemFree_bytes-node_memory_Cached_bytes-node_memory_Buffers_bytes",
           "instant": false,
+          "legendFormat": "used",
           "range": true,
           "refId": "A"
         }
@@ -205,7 +206,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -283,11 +284,12 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "node_memory_MemFree_bytes",
           "instant": false,
+          "legendFormat": "free",
           "range": true,
           "refId": "A"
         }
@@ -311,7 +313,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -369,7 +371,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "topk(10, cpu_usage)",
@@ -385,7 +387,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -463,7 +465,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "rate(node_cpu_seconds_total{mode!=\"idle\"}[1m])",
@@ -479,7 +481,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -557,7 +559,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "100 - rate(node_cpu_seconds_total{mode=\"idle\"}[1m]) * 100  ",
@@ -586,7 +588,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -610,7 +612,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "bytes"
         },
         "overrides": []
       },
@@ -638,7 +641,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "node_filesystem_size_bytes{device!~\"tmpfs\", mountpoint!~\"/etc/hostname|/etc/resolv.conf|/etc/hosts\"}",
@@ -654,7 +657,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -712,7 +715,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
           "expr": "topk(10,disk_read)",
@@ -728,7 +731,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+        "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
       },
       "fieldConfig": {
         "defaults": {
@@ -786,21 +789,21 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "c2b8d884-61cb-4e94-bd0e-fd41e18f9299"
+            "uid": "bd31c44d-09a3-44f9-a052-9161b1b5beca"
           },
           "editorMode": "builder",
-          "expr": "topk(10,disk_read)",
+          "expr": "topk(10, disk_write)",
           "instant": false,
           "legendFormat": "{{process}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Disk read rate per application",
+      "title": "Disk write rate per application",
       "type": "bargauge"
     }
   ],
-  "refresh": "",
+  "refresh": "5s",
   "schemaVersion": 38,
   "style": "dark",
   "tags": [],
@@ -815,6 +818,6 @@
   "timezone": "",
   "title": "New dashboard",
   "uid": "bdc5191f-0455-4e28-8341-7c88c6a2eb11",
-  "version": 10,
+  "version": 5,
   "weekStart": ""
 }
