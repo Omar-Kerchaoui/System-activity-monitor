@@ -1,0 +1,11 @@
+#!/bin/bash
+
+z=$(sudo iotop -b -n 1 | head -n 50)
+while read -r line;do
+   
+   var=$var$(awk 'NR > 2{print "disk_write{process=\""$9"\", pid=\""$2"\"}", $6z}');
+
+done <<< "$z"
+
+curl -X POST -H "Content-Type: text/plain" --data "$var
+" http://localhost:9091/metrics/job/top/instance/write
