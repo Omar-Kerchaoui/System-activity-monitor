@@ -47,13 +47,11 @@
 
 <!-- ABOUT THE PROJECT -->
 
-<a name="readme-top"></a>
-
 ## About The Project
 
 Welcome to the System Monitor project - a powerful tool designed to provide real-time insights into your Linux system's performance. This project embraces the principles of object-oriented programming  plus the integration of Grafana and Prometheus, in order to deliver an intuitive and informative system monitoring experience similar to the htop utility.
 
-<a href="#built-with"></a>
+<a name="built-with"></a>
 
 ### Built With
 
@@ -65,7 +63,7 @@ Languages and Tools used to build this project include
 
 <!-- Terminal project -->
 
-<a href="#terminal"></a>
+<a name="terminal"></a>
 
 ## Real-time Statistics Display via terminal
 
@@ -74,14 +72,14 @@ In this phase of the project, we aimed to create a Grafana dashboard for our Sys
 
 
 
-<a href="#goals1"></a>
+<a name="goals1"></a>
 
 
 ### Goals
 
 The primary objective of this project is to employ object-oriented programming to create a Linux system monitor similar to htop. Additionally, we implemented a feature for real-time updates.
 
-<a href="#structure1"></a>
+<a name="structure1"></a>
 
 
 ### Structure
@@ -106,7 +104,7 @@ The project is structured into various files, with header files located in the "
 │ │ ├── disk_info.h\
 │ │ ├── process_io_info.h\
 │ ├── CMakeLists.txt/\
-│ ├── Makefile/\
+│ ├── Makefile/
 
 1. `src/main.cpp`: This file acts as the entry point, coordinating the system and ncurses logic.
 
@@ -127,7 +125,7 @@ The project is structured into various files, with header files located in the "
 7.  `src/processor.cpp` (and corresponding header file): Provides the "Processor" class, which handles processor-related data and logic.
 
 
-<a href="#dependencies1"></a>
+<a name="dependencies1"></a>
 
 
 ### Dependencies
@@ -142,7 +140,7 @@ The successful execution of this project relies on the following dependencies:
   - Use `sudo apt install libncurses5-dev libncursesw5-dev` to install ncurses  
 
 
-<a href="#run1"></a>
+<a name="run1"></a>
 
 ### Detailed Build and Run Instructions
 
@@ -156,7 +154,7 @@ Note:
 
 Please be aware that you might encounter some warnings in the code. To mitigate these potential issues, we have utilized C++17 standards, which are explicitly set in the configuration file located at .vscode/c_cpp_properties.json for Visual Studio Code.
 
-<a href="#demo1"></a>
+<a name="demo1"></a>
 
 
 ### Demonstration
@@ -172,13 +170,15 @@ The upper block displays CPU and memory utilization, along with a list of disk p
 
 <!-- Terminal project -->
 
-<a href="#prometheus-grafana"></a>
+<a name="prometheus-grafana"></a>
 
 
 ## Real-time Statistics Display via Prometheus-grafana
 
 In this phase of the project, we aimed to create a Grafana dashboard for our System Activity Monitor. To achieve this, we harnessed the power of Prometheus as our data source, which provides robust and efficient monitoring capabilities. Additionally, we integrated Node Exporter, a tool that collects essential system metrics, and Pushgateway, which facilitates the exposition of metrics from non-Prometheus-native sources.
 
+
+<a name="setup"></a>
 
 ### Full setup
 
@@ -189,7 +189,8 @@ When running locally with Docker, you can access the following services and thei
 - Node Exporter: http://localhost:9100/metrics
 - pushgateway: http://localhost:9091/metrics
 
-<a href="#startPro"></a>
+<a name="startPro"></a>
+
 
 ### start prometheus-grafana
 
@@ -229,6 +230,8 @@ Note:
 
 Don't forget to include Prometheus as the data source in your Grafana dashboard and ensure that you refresh each panel. By doing so, you'll establish a direct connection to Prometheus for fetching real-time data and ensure that all panels display the most up-to-date information.
 
+<a name="grab"></a>
+
 ### Let's grab some system metrics (memory, CPU, disk)
 
 Below are the queries to retrieve all the essential metrics showcased on this dashboard. 
@@ -263,6 +266,8 @@ topk(10,disk_read)
 # Disk write rate per application (based on script disk-write.sh)
 topk(10,disk_write)
 ```
+
+<a name="demo2"></a>
 
 
 ### Demonstration
