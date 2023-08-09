@@ -68,7 +68,8 @@ Languages and Tools used to build this project include
 ## Real-time Statistics Display via terminal
 
 
-In this phase of the project, we aimed to create a Grafana dashboard for our System Activity Monitor. To achieve this, we harnessed the power of Prometheus as our data source, which provides robust and efficient monitoring capabilities. Additionally, we integrated Node Exporter, a tool that collects essential system metrics, and Pushgateway, which facilitates the exposition of metrics from non-Prometheus-native sources.
+During this project phase, our objective was to develop a C++ system monitor capable of utilizing the terminal to present a user interface featuring various essential statistics.
+
 
 
 
